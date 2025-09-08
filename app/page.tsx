@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Play, Users, Trophy, Star, ArrowRight, Dumbbell, Zap, Target, Award } from "lucide-react"
+import { Play, Users, Star, ArrowRight, Zap, Award, Shield, Swords, Crown } from "lucide-react"
 
 export default function LegendaryFitnessPage() {
   const [counters, setCounters] = useState({ members: 0, success: 0, years: 0, access: 0 })
@@ -89,23 +89,23 @@ export default function LegendaryFitnessPage() {
         <div className="relative z-10 text-center max-w-6xl mx-auto px-4">
           <div className="animate-slide-up">
             <Badge className="mb-6 bg-primary/20 text-white border-primary/30 text-lg px-6 py-2 animate-glow">
-              SAGAR'S LEGENDARY FITNESS
+              SPENCER SPARTAN FITNESS
             </Badge>
             <h1 className="text-6xl md:text-8xl font-bold mb-6 text-gradient animate-pulse-strong">
               FORGE YOUR
               <br />
-              LEGENDARY PHYSIQUE
+              SPARTAN WARRIOR
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Where ordinary men become extraordinary warriors. Unleash the beast within and transform your body into a
-              weapon of mass destruction.
+              Where ordinary mortals become legendary Spartan warriors. Train like the 300, fight like a champion, and
+              forge your body into an unstoppable weapon of ancient power.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-bold animate-glow"
               >
-                START YOUR TRANSFORMATION
+                JOIN THE SPARTAN ARMY
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button
@@ -114,18 +114,17 @@ export default function LegendaryFitnessPage() {
                 className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground px-8 py-4 text-lg bg-transparent"
               >
                 <Play className="mr-2 h-5 w-5" />
-                WATCH WARRIORS TRAIN
+                WITNESS SPARTAN TRAINING
               </Button>
             </div>
           </div>
         </div>
 
-        {/* Floating Elements */}
         <div className="absolute top-20 left-10 animate-float">
-          <Dumbbell className="h-12 w-12 text-primary/30" />
+          <Shield className="h-12 w-12 text-primary/30" />
         </div>
         <div className="absolute bottom-20 right-10 animate-float" style={{ animationDelay: "1s" }}>
-          <Zap className="h-16 w-16 text-secondary/30" />
+          <Swords className="h-16 w-16 text-secondary/30" />
         </div>
       </section>
 
@@ -137,25 +136,25 @@ export default function LegendaryFitnessPage() {
               <div className="text-5xl md:text-6xl font-bold text-primary mb-2 animate-counter-up">
                 {counters.members}+
               </div>
-              <div className="text-lg text-muted-foreground font-semibold">WARRIORS TRAINED</div>
+              <div className="text-lg text-muted-foreground font-semibold">SPARTAN WARRIORS</div>
             </div>
             <div className="text-center scroll-fade-in" style={{ animationDelay: "0.2s" }}>
               <div className="text-5xl md:text-6xl font-bold text-secondary mb-2 animate-counter-up">
                 {counters.success}%
               </div>
-              <div className="text-lg text-muted-foreground font-semibold">ACHIEVE THEIR GOALS</div>
+              <div className="text-lg text-muted-foreground font-semibold">CONQUER THEIR GOALS</div>
             </div>
             <div className="text-center scroll-fade-in" style={{ animationDelay: "0.4s" }}>
               <div className="text-5xl md:text-6xl font-bold text-primary mb-2 animate-counter-up">
                 {counters.access}/7
               </div>
-              <div className="text-lg text-muted-foreground font-semibold">ACCESS TO GREATNESS</div>
+              <div className="text-lg text-muted-foreground font-semibold">SPARTAN TRAINING</div>
             </div>
             <div className="text-center scroll-fade-in" style={{ animationDelay: "0.6s" }}>
               <div className="text-5xl md:text-6xl font-bold text-secondary mb-2 animate-counter-up">
                 {counters.years}
               </div>
-              <div className="text-lg text-muted-foreground font-semibold">YEARS OF EXCELLENCE</div>
+              <div className="text-lg text-muted-foreground font-semibold">YEARS OF GLORY</div>
             </div>
           </div>
         </div>
@@ -165,37 +164,37 @@ export default function LegendaryFitnessPage() {
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16 scroll-fade-in">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gradient">TRAINING PROGRAMS</h2>
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gradient">SPARTAN TRAINING REGIMENS</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Choose your path to legendary status. Each program is designed to push your limits and forge an
-              unstoppable warrior.
+              Choose your path to Spartan glory. Each regimen is forged in the fires of ancient warrior tradition to
+              create an unstoppable force.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                title: "BEAST MODE TRAINING",
-                description: "Unleash raw power with compound movements and explosive training",
-                icon: <Dumbbell className="h-8 w-8" />,
+                title: "SPARTAN STRENGTH",
+                description: "Build legendary power with ancient warrior training methods",
+                icon: <Shield className="h-8 w-8" />,
                 color: "primary",
               },
               {
-                title: "STRENGTH UNLEASHED",
-                description: "Build legendary strength with progressive powerlifting protocols",
-                icon: <Trophy className="h-8 w-8" />,
+                title: "300 WARRIOR PROTOCOL",
+                description: "Elite conditioning inspired by the legendary 300 Spartans",
+                icon: <Swords className="h-8 w-8" />,
                 color: "secondary",
               },
               {
-                title: "CARDIO WARRIOR",
-                description: "Forge cardiovascular endurance that never quits",
+                title: "AGOGE ENDURANCE",
+                description: "Forge unbreakable mental and physical endurance",
                 icon: <Zap className="h-8 w-8" />,
                 color: "primary",
               },
               {
-                title: "NUTRITION MASTERY",
-                description: "Fuel your transformation with warrior-level nutrition",
-                icon: <Target className="h-8 w-8" />,
+                title: "SPARTAN NUTRITION",
+                description: "Fuel your body like an ancient warrior king",
+                icon: <Crown className="h-8 w-8" />,
                 color: "secondary",
               },
             ].map((program, index) => (
@@ -229,31 +228,31 @@ export default function LegendaryFitnessPage() {
       <section className="py-20 bg-legendary-gradient">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16 scroll-fade-in">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gradient">LEGENDARY TRANSFORMATIONS</h2>
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gradient">SPARTAN TRANSFORMATIONS</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Witness the power of dedication. These warriors transformed their bodies and minds through legendary
-              training.
+              Witness the power of Spartan discipline. These warriors transformed their bodies and minds through
+              legendary training worthy of ancient Greece.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                name: "Marcus 'The Tank' Johnson",
-                transformation: "Lost 50lbs, Gained Legendary Strength",
-                quote: "This place didn't just change my body, it forged my soul into steel.",
+                name: "Marcus 'The Spartan Shield' Johnson",
+                transformation: "Lost 50lbs, Gained Warrior Strength",
+                quote: "This place didn't just change my body, it forged my soul into Spartan steel.",
                 image: "/muscular-man-transformation-before-after.jpg",
               },
               {
-                name: "Sarah 'Iron Will' Chen",
+                name: "Sarah 'Warrior Queen' Chen",
                 transformation: "Built 20lbs Muscle, Became Unstoppable",
-                quote: "I walked in weak, I walked out a warrior goddess.",
+                quote: "I walked in mortal, I walked out a Spartan goddess of war.",
                 image: "/strong-woman-fitness-transformation.jpg",
               },
               {
-                name: "David 'Beast Mode' Rodriguez",
-                transformation: "Complete Body Recomposition",
-                quote: "They didn't just train my body, they unleashed the beast within.",
+                name: "David 'Spartan Beast' Rodriguez",
+                transformation: "Complete Warrior Transformation",
+                quote: "They didn't just train my body, they awakened the Spartan within.",
                 image: "/athletic-man-muscle-transformation.jpg",
               },
             ].map((story, index) => (
@@ -292,49 +291,50 @@ export default function LegendaryFitnessPage() {
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16 scroll-fade-in">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gradient">CHOOSE YOUR WARRIOR PATH</h2>
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gradient">CHOOSE YOUR SPARTAN RANK</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Every legend starts with a single step. Choose the membership that matches your commitment to greatness.
+              Every Spartan legend starts with choosing your rank. Select the membership that matches your commitment to
+              Spartan excellence.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
               {
-                name: "WARRIOR",
+                name: "SPARTAN RECRUIT",
                 price: "$49",
                 period: "/month",
                 features: [
-                  "Access to all equipment",
-                  "Basic training programs",
-                  "Locker room access",
-                  "Community support",
+                  "Access to all training grounds",
+                  "Basic Spartan programs",
+                  "Warrior locker access",
+                  "Brotherhood support",
                 ],
                 popular: false,
               },
               {
-                name: "GLADIATOR",
+                name: "SPARTAN HOPLITE",
                 price: "$99",
                 period: "/month",
                 features: [
-                  "Everything in Warrior",
-                  "Personal training sessions",
-                  "Nutrition coaching",
-                  "Priority booking",
-                  "Exclusive events",
+                  "Everything in Recruit",
+                  "Personal Spartan training",
+                  "Warrior nutrition coaching",
+                  "Priority battle scheduling",
+                  "Exclusive Spartan events",
                 ],
                 popular: true,
               },
               {
-                name: "LEGEND",
+                name: "SPARTAN KING",
                 price: "$199",
                 period: "/month",
                 features: [
-                  "Everything in Gladiator",
-                  "24/7 gym access",
-                  "Custom meal plans",
+                  "Everything in Hoplite",
+                  "24/7 Spartan fortress access",
+                  "Royal meal plans",
                   "Recovery therapy",
-                  "VIP treatment",
+                  "King's treatment",
                 ],
                 popular: false,
               },
@@ -382,18 +382,18 @@ export default function LegendaryFitnessPage() {
 
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4 scroll-fade-in">
           <h2 className="text-5xl md:text-7xl font-bold mb-6 text-gradient animate-pulse-strong">
-            YOUR LEGEND STARTS NOW
+            YOUR SPARTAN LEGEND AWAITS
           </h2>
           <p className="text-xl md:text-2xl mb-8 text-muted-foreground leading-relaxed">
-            Stop making excuses. Stop waiting for tomorrow. The only thing standing between you and legendary status is
-            action.
+            The gates of Sparta are open. Stop making excuses. The only thing standing between you and Spartan glory is
+            your first step into battle.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-6 text-xl font-bold animate-glow"
             >
-              CLAIM YOUR FREE TRIAL
+              CLAIM YOUR SPARTAN TRIAL
               <ArrowRight className="ml-2 h-6 w-6" />
             </Button>
             <Button
@@ -402,17 +402,16 @@ export default function LegendaryFitnessPage() {
               className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground px-12 py-6 text-xl bg-transparent"
             >
               <Users className="mr-2 h-6 w-6" />
-              JOIN THE BROTHERHOOD
+              JOIN THE 300
             </Button>
           </div>
         </div>
 
-        {/* Floating Elements */}
         <div className="absolute top-10 left-10 animate-float">
-          <Trophy className="h-16 w-16 text-primary/20" />
+          <Shield className="h-16 w-16 text-primary/20" />
         </div>
         <div className="absolute bottom-10 right-10 animate-float" style={{ animationDelay: "2s" }}>
-          <Target className="h-20 w-20 text-secondary/20" />
+          <Crown className="h-20 w-20 text-secondary/20" />
         </div>
       </section>
 
@@ -420,27 +419,27 @@ export default function LegendaryFitnessPage() {
       <footer className="bg-card border-t border-border py-12">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <div className="mb-8">
-            <h3 className="text-3xl font-bold text-gradient mb-4">SAGAR'S LEGENDARY FITNESS</h3>
+            <h3 className="text-3xl font-bold text-gradient mb-4">SPENCER SPARTAN FITNESS</h3>
             <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Where legends are forged, warriors are born, and ordinary becomes extraordinary.
+              Where Spartan legends are forged, warriors are born, and mortals become gods of war.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <h4 className="font-bold text-foreground mb-4">CONTACT</h4>
-              <p className="text-muted-foreground">123 Warrior Street</p>
-              <p className="text-muted-foreground">Beast City, BC 12345</p>
-              <p className="text-muted-foreground">(555) LEGENDARY</p>
+              <p className="text-muted-foreground">300 Spartan Avenue</p>
+              <p className="text-muted-foreground">Sparta City, SC 30000</p>
+              <p className="text-muted-foreground">(555) SPARTAN-1</p>
             </div>
             <div>
-              <h4 className="font-bold text-foreground mb-4">HOURS</h4>
+              <h4 className="font-bold text-foreground mb-4">TRAINING HOURS</h4>
               <p className="text-muted-foreground">Mon-Fri: 5AM - 11PM</p>
               <p className="text-muted-foreground">Sat-Sun: 6AM - 10PM</p>
-              <p className="text-primary font-semibold">24/7 for Legends</p>
+              <p className="text-primary font-semibold">24/7 for Spartan Kings</p>
             </div>
             <div>
-              <h4 className="font-bold text-foreground mb-4">FOLLOW THE LEGEND</h4>
+              <h4 className="font-bold text-foreground mb-4">FOLLOW THE SPARTANS</h4>
               <div className="flex justify-center space-x-4">
                 <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary">
                   Instagram
@@ -457,7 +456,7 @@ export default function LegendaryFitnessPage() {
 
           <div className="border-t border-border pt-8">
             <p className="text-muted-foreground">
-              © 2024 Sagar's Legendary Fitness. All rights reserved. Forge your legend.
+              © 2024 Spencer Spartan Fitness. All rights reserved. Forge your Spartan legend.
             </p>
           </div>
         </div>
